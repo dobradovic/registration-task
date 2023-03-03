@@ -1,6 +1,5 @@
 import { TextField } from "@mui/material";
 import { useEffect, useState } from "react";
-import { useValidation } from "react-simple-form-validator";
 
 import classes from "./index.module.scss";
 
@@ -11,13 +10,6 @@ export function Registration() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const { isFieldInError, getErrorsInField, isFormValid } = useValidation({
-    fieldsRules: {
-      firstName: { required: true },
-    },
-    state: { firstName },
-  });
 
   useEffect(() => {
     fetch("http://localhost:8000/registrationLabels")
@@ -171,7 +163,6 @@ export function Registration() {
             type="submit"
             className={classes.wrap__submitbutton}
             onClick={(e) => handleFormSubmit(e)}
-            disabled={!isFormValid}
           >
             {data.RegistrationSaveButtonLabel}
           </button>
