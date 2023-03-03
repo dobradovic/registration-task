@@ -1,0 +1,15 @@
+@mixin mobile {
+  @media (max-width: 460px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 849px) {
+    @content;
+  }
+}
+
+@mixin gradient-sea-green {
+  background: linear-gradient(76.64deg, #079188 13.2%, #438006 81.75%);
+}
