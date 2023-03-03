@@ -80,6 +80,9 @@
     }
   },
   "createUser": {
-    "success": true
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "password": ""
   }
 }

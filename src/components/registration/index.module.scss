@@ -1,2 +1,97 @@
-.Title {
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.wrap {
+  text-align: left;
+  padding: 117px 83px;
+  @include mobile() {
+    padding: 10px 51px;
+    width: 90%;
+  }
+  &__title {
+    margin-top: 50px;
+  }
+
+  &__description {
+    margin-top: $m;
+    @include mobile() {
+      margin-top: $s;
+    }
+  }
+
+  &__gender {
+    display: inline-block;
+    margin-top: $l;
+    @include mobile() {
+      margin-top: $m;
+    }
+  }
+
+  &__genderRadio {
+    display: flex;
+    margin-top: 10px;
+    gap: 16px;
+  }
+
+  &__inputField {
+    color: red;
+    margin-top: $nr-mx;
+  }
+
+  &__passwordInfo {
+    color: #82827d;
+    font-size: 11px;
+    font-weight: 400;
+    ul {
+      list-style-type: none;
+
+      li:before {
+        content: "-";
+        text-indent: -5px;
+      }
+    }
+  }
+
+  &__radioButtonWrapper {
+    margin-top: $m;
+    margin-bottom: $nr-xl;
+  }
+
+  &__radioButton {
+    margin-top: $nr-mx;
+  }
+
+  &__checkboxLabel {
+    margin-left: 8px;
+  }
+
+  &__submitbutton {
+    display: block;
+    padding: 15px 40px;
+    background: $jelmoli-green;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    border: none;
+    font-family: "medium";
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+      @include gradient-sea-green();
+    }
+    @include mobile() {
+      width: 100%;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $jelmoli-green;
+    color: $dark;
+    margin-top: $l;
+    @include mobile() {
+      margin-top: $xxxls;
+    }
+  }
 }
