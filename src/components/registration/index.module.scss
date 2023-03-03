@@ -74,10 +74,11 @@
     text-transform: uppercase;
     border: none;
     font-family: "medium";
-    transition: all 0.4s ease-in-out;
+    transition: all 1.4s ease-in-out;
 
     &:hover {
       @include gradient-sea-green();
+      cursor: pointer;
     }
     @include mobile() {
       width: 100%;

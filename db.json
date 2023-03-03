@@ -80,9 +80,9 @@
     }
   },
   "createUser": {
-    "firstName": "",
-    "lastName": "",
-    "email": "",
-    "password": ""
+    "firstName": "testing",
+    "lastName": "testing123",
+    "email": "testing555@gmail.com",
+    "password": "hhh"
   }
 }
